@@ -4,7 +4,7 @@ ARG SONAR_SCANNER_VERSION=3.2.0.1227
 
 WORKDIR /opt
 
-ADD entrypoint.sh /usr/local/bin/
+ADD files/entrypoint.sh /usr/local/bin/
 
 RUN apk add --no-cache wget nodejs \
     && wget -q https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
