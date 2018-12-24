@@ -1,7 +1,10 @@
 #!/bin/sh
 set -e
 
+export BINARY_PATH=$(dirname "$0")
 export SOURCE_PATH='/opt/source'
+
+source $BINARY_PATH/sources.sh
 
 : ${SONARQUBE_URL? "A URL do SonarQube deve ser informada"}
 : ${SONARQUBE_SETTINGS_FILE:='sonar-project.properties'}
