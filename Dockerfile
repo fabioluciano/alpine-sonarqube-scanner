@@ -12,6 +12,6 @@ RUN apk add --no-cache --virtual .build-dependencies wget \
     && ln -s /opt/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner /usr/local/bin/sonar-scanner \
     && ln -s /opt/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner-debug /usr/local/bin/sonar-scanner-debug \
     && chmod a+x /usr/local/bin/* -R \
-    && apk del  .build-dependencies
+    && apk del .build-dependencies
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
