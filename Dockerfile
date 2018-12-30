@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
-LABEL maintainer="Fábio Luciano"
+LABEL maintainer="Fábio Luciano <fabio@naoimporta.com>"
+
 ARG SONAR_SCANNER_VERSION=3.2.0.1227
 
 WORKDIR /opt
