@@ -23,6 +23,10 @@ else
     SONARQUBE_OPTIONS="${SONARQUBE_OPTIONS} -Dsonar.projectBaseDir=${SOURCE_PATH}"
 fi
 
+if [[ ! -z "${SONARQUBE_TOKEN}" ]]; then
+    SONARQUBE_OPTIONS="${SONARQUBE_OPTIONS} -Dsonar.login=${SONARQUBE_TOKEN}"
+fi
+
 if [[ ! -z "${SONARQUBE_BASE_DIR}" ]]; then
     SONARQUBE_OPTIONS="${SONARQUBE_OPTIONS} -Dsonar.scm.provider=${SONARQUBE_SCM_PROVIDER}"
 fi
