@@ -9,7 +9,7 @@ WORKDIR /opt
 
 ADD files/* /usr/local/bin/
 
-RUN yum install -y wget unzip \
+RUN yum install -y wget unzip nodejs \
     && wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
     && unzip -q sonar-scanner-cli-${SONAR_SCANNER_VERSION} && rm sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
     && ln -s /opt/sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner /usr/local/bin/sonar-scanner \
